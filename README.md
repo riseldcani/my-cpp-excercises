@@ -1,1 +1,1 @@
-hey there this repo is to have track of my progress
+hey there this repo will be used to keep track of my progress
