@@ -79,40 +79,10 @@ void wordChanger(std::string &word, std::vector<char>& charss, char& rChar){
     std::cout << "Your final word is: " << x << '\n';
 }
 
-enum Rating{
-    good = 1,
-    bad = 2,
-    shit = 3,
-};
-
-std::ostream& operator<<(std::ostream& out, Rating test)
-{
-	switch (test)
-	{
-	case good:  out << "SUCCESSFUL: Thank you!";  break;
-	case bad:   out << "MOTIVATING: Damn :()";    break;
-	case shit:  out << "DEMOTIVATING: :'( ";   break;
-	default:    out << "ERROR: Bad input";    break;
-	}
-	return out;
-}
-
-void rateUs(Rating& rate){
-
-    std::cout << "Please rate our application (1=good, 2=bad, 3=worst): ";
-    int input{};
-    std::cin >> input; 
-
-    Rating rated{ static_cast<Rating>(input) }; 
-    std::cout << rated;
-}
-
 int main(){
     std::string x{getWord()};
     std::vector<char> y{whichChar()};
-	char z{getReplacingChar()};
+    char z{getReplacingChar()};
     wordChanger(x,y,z);
 
-    Rating askUser{};
-    rateUs(askUser);
 }
